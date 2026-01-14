@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Question</title>
+</head>
+<body>
+
+    <h1 id="h1">DOM QUESTION</h1>
+    <p id="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Assumenda ab quaerat accusamus.
+    </p>
+
+    <button onclick="dark()">Dark Theme</button>
+    <button onclick="light()">Light Theme</button>
+    <button onclick="show()">Show</button>
+    <button onclick="hide()">Hide</button>
+
+    <script>
+        let show = () => {
+            let eles = document.getElementById('p1');
+            eles.style.display = 'block';
+        }
+
+        let hide = () => {
+            let eles = document.getElementById('p1');
+            eles.style.display = 'none';
+        }
+
+        let dark = () => {
+            document.body.style.backgroundColor = '#121212';
+            let ele = document.getElementById('h1');
+            ele.style.color = 'snow';
+        }
+
+        let light = () => {
+            document.body.style.backgroundColor = 'white';
+            let ele = document.getElementById('h1');
+            ele.style.color = 'black';
+        }
+    </script>
+
+</body>
+</html>
